@@ -416,6 +416,7 @@
   <div class="hero-image-col">
     <div class="hero-photo-wrap">
       <div class="hero-photo-frame"></div>
+      <!-- Photo placeholder with initials -->
       <img src="photo.png" alt="Sonju Simone Patterson" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
       <div class="hero-stats">
         <div class="stat-item">
@@ -536,7 +537,7 @@
         <p>A comprehensive overview of 15+ years in brand growth, trade marketing, and communications leadership across the Caribbean.</p>
         <div class="card-actions">
           <button class="btn-primary" onclick="openModal('cv-modal')">View CV</button>
-          <a href="Sonju_S_Patterson" download class="btn-ghost">Download</a>
+          <a href="Sonju_S_Patterson.pdf" download class="btn-ghost">Download</a>
         </div>
       </div>
     </div>
@@ -560,7 +561,7 @@
       </div>
     </div>
 
-    <!-- I Love Disney PDF -->
+    <!-- I Love Disney PPTX -->
     <div class="portfolio-card">
       <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0d47a1,#c62828);">
         <div style="text-align:center;">
@@ -571,9 +572,9 @@
       </div>
       <div class="portfolio-card-body">
         <h3>I Love Disney — Photo Presentation</h3>
-        <p>A visual presentation from the I Love Disney campaign launch, showcasing campaign photography and event moments.</p>
+        <p>A visual presentation from the I Love Disney campaign, showcasing campaign photography, event moments, and brand activations.</p>
         <div class="card-actions">
-          <a href="I_Love_Disney_photos.pdf" download class="btn-ghost">View Presentation</a>
+          <a href="I_Love_Disney_photos.pdf" download class="btn-primary">Download Presentation</a>
         </div>
       </div>
     </div>
@@ -593,6 +594,7 @@
         <div style="margin-top:1rem;">
           <audio controls style="width:100%;">
             <source src="CHICKEN_BARN_COKE.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
           </audio>
         </div>
       </div>
@@ -681,7 +683,7 @@
       </div>
       <div class="contact-item">
         <span>Email</span>
-        <a href="mailto:patterson.sonju@gmail.com">patterson.sonju@gmail.com</a>
+        <a href="/cdn-cgi/l/email-protection#14647560607166677b7a3a677b7a7e61547379757d783a777b79"><span class="__cf_email__" data-cfemail="61110015150413120e0f4f120e0f0b1421060c00080d4f020e0c">[email&#160;protected]</span></a>
       </div>
       <div class="contact-item">
         <span>Location</span>
@@ -689,7 +691,7 @@
       </div>
       <div class="contact-item">
         <span>Education</span>
-        <span>MBA - University of Edinburgh Napier (expected 2027)</span>
+        <span>BSc Political Science with Law — UWI Barbados</span>
       </div>
     </div>
   </div>
@@ -707,8 +709,7 @@
       <button class="modal-close" onclick="closeModal('cv-modal')">✕</button>
     </div>
     <div class="modal-body">
-      <iframe src="Sonju_Simone_Patterson.pdf#toolbar=0" title="CV"></iframe>
-    </div>
+      <iframe src="Sonju_S_Patterson.pdf#toolbar=0" title="CV"></iframe>    </div>
   </div>
 </div>
 
@@ -719,12 +720,12 @@
       <button class="modal-close" onclick="closeModal('disney-pdf-modal')">✕</button>
     </div>
     <div class="modal-body">
-      <iframe src="I_Love_Disney_2014_.pdf#toolbar=0" title="I Love Disney Campaign"></iframe>
+      <iframe src="I_Love_Disney_2014.pdf#toolbar=0" title="I Love Disney Campaign"></iframe>
     </div>
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   function openModal(id) {
     document.getElementById(id).classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -736,15 +737,4 @@
   function handleOverlayClick(e, id) {
     if (e.target.classList.contains('modal-overlay')) closeModal(id);
   }
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.modal-overlay.open').forEach(m => {
-        m.classList.remove('open');
-      });
-      document.body.style.overflow = '';
-    }
-  });
-</script>
-
-</body>
-</html>
+  document.addEve
