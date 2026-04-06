@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sonju Simone Patterson | Portfolio</title>
+  <title>Sonju Patterson | Brand Growth Leader & Communications Strategist</title>
+  <meta name="description" content="Sonju Patterson - Brand Growth Leader and Communications Strategist with 15+ years across Caribbean distribution and broadcast media. Expertise in trade marketing, sponsorships, and multi-channel campaigns.">
+  <meta property="og:title" content="Sonju Patterson | Brand Growth Leader & Communications Strategist">
+  <meta property="og:description" content="15+ years driving brand equity, trade marketing, and multi-channel campaigns across the Caribbean. Explore my portfolio of campaign work, sponsorships, and communications strategy.">
+  <meta property="og:image" content="SoniaHeadshot.jpeg">
+  <meta property="og:url" content="https://sonjupatterson.github.io/Sonju-Simone-Patterson/">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Didact+Gothic&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,300;1,6..96,400&display=swap" rel="stylesheet">
   <style>
@@ -106,11 +112,11 @@
 
     .hero-image-col {
       position: relative; z-index: 1;
-      height: 100vh; display: flex; align-items: flex-end;
-      justify-content: center; padding-bottom: 3rem;
+      height: 100vh; display: flex; align-items: center;
+      justify-content: center; padding: 6rem 0 2rem;
     }
     .hero-photo-wrap {
-      width: 340px; height: 480px; position: relative;
+      width: 440px; height: 600px; position: relative;
     }
     .hero-photo-frame {
       width: 100%; height: 100%;
@@ -416,7 +422,7 @@
   <div class="hero-image-col">
     <div class="hero-photo-wrap">
       <div class="hero-photo-frame"></div>
-      <img src="photo.png" alt="Sonju Simone Patterson" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+      <img src="SoniaHeadshot.jpeg" alt="Sonju Simone Patterson" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
       <div class="hero-stats">
         <div class="stat-item">
           <div class="stat-num">15+</div>
@@ -573,7 +579,7 @@
         <h3>I Love Disney — Photo Presentation</h3>
         <p>A visual presentation from the I Love Disney campaign, showcasing campaign photography and event moments.</p>
         <div class="card-actions">
-          <button class="btn-primary" onclick="openModal('disney-pdf-modal')">View Photos</button>
+          <button class="btn-primary" onclick="openModal('disney-photos-modal')">View Photos</button>
           <a href="I_Love_Disney_photos.pdf" download class="btn-primary">Download Presentation</a>
         </div>
       </div>
@@ -683,7 +689,7 @@
       </div>
       <div class="contact-item">
         <span>Email</span>
-        <span>patterson.sonju@gmail.com</span>
+        <a href="mailto:patterson.sonju@gmail.com">patterson.sonju@gmail.com</a>
       </div>
       <div class="contact-item">
         <span>Location</span>
@@ -709,7 +715,8 @@
       <button class="modal-close" onclick="closeModal('cv-modal')">✕</button>
     </div>
     <div class="modal-body">
-      <iframe src="Sonju_S_Patterson.pdf#toolbar=0" title="CV"></iframe>    </div>
+      <iframe src="Sonju_S_Patterson.pdf#zoom=page-width" title="CV"></iframe>
+    </div>
   </div>
 </div>
 
@@ -720,12 +727,24 @@
       <button class="modal-close" onclick="closeModal('disney-pdf-modal')">✕</button>
     </div>
     <div class="modal-body">
-      <iframe src="I_Love_Disney_2014.pdf#toolbar=0" title="I Love Disney Campaign"></iframe>
+      <iframe src="I_Love_Disney_2014.pdf#zoom=page-width" title="I Love Disney Campaign"></iframe>
     </div>
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<div class="modal-overlay" id="disney-photos-modal" onclick="handleOverlayClick(event, 'disney-photos-modal')">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>I Love Disney — Photo Presentation</h3>
+      <button class="modal-close" onclick="closeModal('disney-photos-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <iframe src="I_Love_Disney_photos.pdf#zoom=page-width" title="I Love Disney Photos"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
   function openModal(id) {
     document.getElementById(id).classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -737,4 +756,13 @@
   function handleOverlayClick(e, id) {
     if (e.target.classList.contains('modal-overlay')) closeModal(id);
   }
-  document.addEve
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(function(m) {
+        closeModal(m.id);
+      });
+    }
+  });
+</script>
+</body>
+</html>
